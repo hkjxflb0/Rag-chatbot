@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Deep dark theme */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    background: #2a2a2a; /* Slightly lighter for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Chat Output */
+#chat-output {
+    flex-grow: 1;
+    max-height: 400px;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #333333; /* Lighter dark for better readability */
+    border-radius: 10px 10px 0 0;
+}
+
+/* Message Styles */
+.message {
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 15px;
+    max-width: 70%;
+    clear: both;
+}
+
+/* User Messages */
+.user-message {
+    background-color: #007bff; /* Blue */
+    color: #ffffff;
+    float: left;
+    border-radius: 15px 15px 15px 0;
+}
+
+/* Bot Messages */
+.bot-message {
+    background-color: #4caf50; /* Green */
+    color: #ffffff;
+    float: right;
+    border-radius: 15px 15px 0 15px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    padding: 10px;
+    background-color: #2a2a2a;
+    gap: 10px;
+}
+
+/* Input Fields */
+input[type="text"], input[type="file"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #444;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #ccc;
+    margin: 8px 0;
+    float: right;
+}
+
+.typing-indicator .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ccc;
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate;
+}
+body {
+    background-color: #ffffff; /* A different dark color for testing */
+}
+.typing-indicator .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-6px);
+    }
+}
